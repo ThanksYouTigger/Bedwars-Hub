@@ -1,0 +1,151 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "BedWars Hub | BedWars 🎇 [NEW YEAR'S!] ", HidePremium = false, SaveConfig = true, IntroText = false, IntroEnabled = false,ConfigFolder = "OrionTest"})
+
+--notification
+
+OrionLib:MakeNotification({
+
+	Name = "BedWars Hub",	Content = "Thanks for using BedWars Hub Happy New Year!",
+
+	Image = "rbxassetid://4483345998",
+
+	Time = 6.5
+
+})
+
+--Windows
+
+local Combat = Window:MakeTab({
+
+	Name = "Combat",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+local Character = Window:MakeTab({
+
+	Name = "Character",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+local Scripts = Window:MakeTab({
+
+	Name = "Scripts",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+local Credits = Window:MakeTab({
+
+	Name = "Credits",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+--Buttons
+
+Combat:AddButton({
+
+	Name = "Vape V4",
+
+	Callback = function()
+
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+
+  	end    
+
+})
+
+Combat:AddButton({
+
+	Name = "JNHH Hub V3(Like Vape)",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/JN-HH-Gaming-Pro/main/JN%20HH%20Gaming%20Pro",true))()
+
+   end    
+
+})
+
+Combat:AddButton({
+
+	Name = "Keyboard",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()	
+
+  	end    
+
+})
+
+Character:AddToggle({
+
+	Name = "Speed",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		local player = game.Players.LocalPlayer
+
+local char = player.Character
+
+char.Humanoid.WalkSpeed = 24
+
+	end    
+
+})
+
+Scripts:AddButton({
+
+	Name = "Inf Yield Script",
+
+	Callback = function()
+
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+  	end    
+
+})
+
+Combat:AddButton({
+
+	Name = "Bedwars (Darkrai X)",
+
+	Callback = function()
+
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/bedwars/main/Script", true))()
+
+  	end    
+
+})
+
+Combat:AddLabel("Darkrai X Scripts might not work")
+
+Combat:AddLabel("Vape Migh crash for when opening it")
+
+Credits:AddLabel("Join My Discord = https://discord.gg/hXw9TxH8 you can dm me")
+
+Credits:AddLabel("GUI made by ManickEngine")
+
+Credits:AddLabel("Thanks for using!")
+
+Character:AddLabel("Might Anti cheat for Speed")
+
+OrionLib:Init()
